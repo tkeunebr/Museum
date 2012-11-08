@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings de paramétrage -->
+	    <string name="app_name">
+	        Museum
+	   	</string>
+   	<!-- Strings d'erreurs -->
+	   	<string name="aucune_oeuvre">
+	   	    Aucune oeuvre trouvée.
+	   	</string>
+	   	<string name="erreur_chargement_oeuvre">
+	   	    Il ne semble y avoir aucune oeuvre associée à votre requête. Veuillez réessayer ultérieurement.
+	   	</string>
+	   	<string name="erreur_chargement_auteur">
+	   	    Il ne semble y avoir aucun auteur associé à votre requête. Veuillez réessayer ultérieurement.
+	   	</string>
+	   	<string name="erreur_chargement_style">
+	   	    Il ne semble y avoir aucun style associé à votre requête. Veuillez réessayer ultérieurement.
+	   	</string>
+	   	<string name="erreur_chargement_liste_oeuvres">
+	   	    Impossible de charger la liste des oeuvres. Veuillez réessayer ultérieurement.
+	   	</string>
+	   	<string name="erreur_connexion">
+	   	    Veuillez vous connecter à Internet.
+	   	</string>
+	   	<string name="erreur_connexion_titre">
+	   	    Pas de réseau
+	   	</string>
+	   	<string name="reessayer">
+	   	    Réessayer.
+	   	</string>
+	   	<string name="erreur_suggestionsType1">
+	   	    Aucune suggestion "A proximité" trouvée.
+	   	</string>
+	   	<string name="erreur_suggestionsType2">
+	   	    Aucune suggestion "Dans l'historique" trouvée.
+	   	</string>
+   	<!-- Strings de titres/textes statiques -->
+	   	<string name="suggestions">
+	   	    Suggestions
+	   	</string>
+	   	<string name="suggestionsType1">
+	   	    A proximité
+	   	</string>
+	   	<string name="suggestionsType2">
+	   	    Dans l\'historique
+	   	</string>
+	   	<string name="justification">
+	   	    Justification
+	   	</string>
+	   	<string name="description_visuel">
+	   	    Visuel de l\'oeuvre
+	   	</string>
+	   	<string name="liste_oeuvre">
+	   	    Oeuvres à proximité
+	   	</string>
+	   	<string name="a_propos">
+	   	    A propos
+	   	</string>
+	   	<string name="demande_login">
+	   	    Entrez votre login
+	   	</string>
+	   	<string name="chargement">
+	   	    Chargement en cours&#8230;
+	   	</string>
+	   	<string name="oeuvre_description">
+	   	    Visuel de l\'oeuvre
+	   	</string>
+	   	<string name="auteur_description">
+	   	    Visuel de l\'auteur
+	   	</string>
+	   	<string name="description">
+	   	    Description
+	   	</string>
+	   	<string name="biographie">
+	   	    Biographie
+	   	</string>
+	   	<string name="artistes">
+	   	    Quelques artistes&#8230;
+	   	</string>
+	<!-- Strings de boutons -->
+	   	<string name="OK">
+	   	    OK
+	   	</string>
+	   	<string name="valider">
+	   	    Valider
+	   	</string>
+	   	<string name="annuler">
+	   	    Annuler
+	   	</string>
+	<!-- Strings du menu -->
+    	<string-array name="menu">
+        	<item>Oeuvre</item>
+        	<item>Auteur</item>
+        	<item>Style</item>
+    	</string-array>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/dialog_layout_root"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="150dp"
+              android:layout_marginRight="150dp"
+              android:background="#ffffff">
+              
+	    <ProgressBar
+	        android:id="@+id/progressbar_liste_oeuvres"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:layout_gravity="center_vertical|center_horizontal"
+	        android:gravity="center_vertical|center_horizontal"
+	        android:visibility="invisible"
+	        />
+	    
+	    <TextView 
+	        android:id="@+id/textview_chargement"
+	        android:text="Chargement des oeuvres à proximité..."
+			android:layout_gravity="center_vertical|center_horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="invisible"/>
+
+	    <TextView
+	        android:id="@+id/textview_liste_oeuvres"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_vertical|center_horizontal"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    android:textSize="30dp"
+		    android:text="Oeuvres à proximité"
+		    android:visibility="gone"
+		/> 
+		
+	    <View
+	        android:id="@+id/bordure"
+	        android:layout_marginTop="25dp"
+	        android:layout_marginBottom="25dp"
+		    android:layout_width="match_parent"
+		   	android:layout_height="2dp"
+		    android:background="#33b5e5"
+		    android:visibility="gone"/>
+	    
+	   <ListView
+	       android:id="@+id/liste_oeuvres"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:visibility="gone">
+    	</ListView>
+</LinearLayout>

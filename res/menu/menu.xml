@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- <item android:id="@+id/menu_add"
+                android:icon="@android:drawable/ic_menu_add"
+                android:title="Bouton +"
+                android:showAsAction="ifRoom|withText" />
+        <item android:id="@+id/menu_delete"
+                android:icon="@android:drawable/ic_menu_delete"
+                android:title="Bouton -"
+                android:showAsAction="ifRoom|withText" />
+         -->
+        <item android:id="@+id/menu_liste"
+            android:showAsAction="ifRoom|withText"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Oeuvres à proximité">
+        </item>
+        <!--<item android:id="@+id/parametres"
+            android:title="Paramètres">
+        </item> -->
+        <item android:id="@+id/about"
+            android:title="A propos">
+        </item>
+        <!-- <item android:id="@+id/menu_recherche"
+	            android:icon="@android:drawable/ic_menu_search"
+	            android:showAsAction="ifRoom|withText"
+	            android:actionViewClass="android.widget.SearchView" />
+	    -->
+</menu>
