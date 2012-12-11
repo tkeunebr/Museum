@@ -180,7 +180,6 @@ pip-log.txt
 *.dmg
 *.gz
 *.iso
-*.jar
 *.rar
 *.tar
 *.zip
