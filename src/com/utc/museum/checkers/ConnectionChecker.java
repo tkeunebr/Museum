@@ -5,14 +5,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 /**
- * Classe abstraite permettant de vérifier à tout instant l'état de la connexion réseau de l'utilisateur
+ * Classe abstraite permettant de verifier e tout instant l'etat de la connexion reseau de l'utilisateur
  */
 public abstract class ConnectionChecker {
 
 	 /**
-     * Méthode statique de la classe qui permet de savoir si l'utilisateur est connecté à Internet ou non
+     * Methode statique de la classe qui permet de savoir si l'utilisateur est connecte e Internet ou non
      * @param menuIndex Context Le contexte dans lequel se trouve l'application
-     * @return boolean Vrai si l'utilisateur est connecté à Internet, faux sinon
+     * @return boolean Vrai si l'utilisateur est connecte e Internet, faux sinon
      */	
 	public static boolean isOnline(Context appContext) {
 		ConnectivityManager mCm = (ConnectivityManager) appContext.getSystemService(Context.CONNECTIVITY_SERVICE);

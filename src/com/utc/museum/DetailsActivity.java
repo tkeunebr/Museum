@@ -5,13 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 
 /**
- * Classe abstraite représentant une activité de type Détails générique et regroupant les éléments communs des Fragments de type Détails
- * Toutes les Activity de type DetailsActivity de l'application héritent de cette classe (utilisée uniquement en mode téléphone)
+ * Classe abstraite representant une activite de type Details generique et regroupant les elements communs des Fragments de type Details
+ * Toutes les Activity de type DetailsActivity de l'application heritent de cette classe (utilisee uniquement en mode telephone)
  */
 public abstract class DetailsActivity extends Activity {
 	
 	/**
-     * Constantes permettant l'identification de manière unique des paramètres qui seront passés entre les Activity
+     * Constantes permettant l'identification de maniere unique des parametres qui seront passes entre les Activity
      */
 	public static final String MENU_INDEX = "menuIndex";
 	public static final String OEUVRE_ID = "idOeuvre";

@@ -1,8 +1,8 @@
 package com.utc.museum.data;
 
 /**
- * Classe représentant un ItemListe dans l'application
- * Un ItemListe est un élément de la liste des oeuvres à proximité de l'utilisateur
+ * Classe representant un ItemListe dans l'application
+ * Un ItemListe est un element de la liste des oeuvres e proximite de l'utilisateur
  */
 public class ItemListe {
 	private String id;

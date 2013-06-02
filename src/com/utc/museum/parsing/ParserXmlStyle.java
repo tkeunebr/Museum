@@ -8,13 +8,13 @@ import com.utc.museum.data.Style;
 import com.utc.museum.data.Suggestion;
 
 /**
- * Cette classe permet le parsing du xml correspondant à un style
- * Elle hérite de la classe abstraite ParserXmlGeneral
+ * Cette classe permet le parsing du xml correspondant e un style
+ * Elle herite de la classe abstraite ParserXmlGeneral
  */
 public class ParserXmlStyle extends ParserXmlGeneral {
 	
 	/**
-	 * Définition des constantes correspondant aux balises XML
+	 * Definition des constantes correspondant aux balises XML
 	 */
 	public static final String STYLE = "style";
 	public static final String EPOQUE = "epoque";
@@ -22,12 +22,12 @@ public class ParserXmlStyle extends ParserXmlGeneral {
 	public static final String DESCRIPTION_VISUEL = "descriptionvisuel";
 	
 	/**
-	 * La liste des auteurs que l'on va peupler avec les auteurs créés par le parser
+	 * La liste des auteurs que l'on va peupler avec les auteurs crees par le parser
 	 */
 	private ArrayList<Style> entries;
 	
 	/**
-	 * L'auteur courant que l'on est en train de créer à partir du XML
+	 * L'auteur courant que l'on est en train de creer e partir du XML
 	 */
 	private Style currentFeed;
 
@@ -36,7 +36,7 @@ public class ParserXmlStyle extends ParserXmlGeneral {
     }
     
 	/**
-	 * Méthode lancée à l'ouverture du fichier XML
+	 * Methode lancee e l'ouverture du fichier XML
 	 */
     @Override
 	public void startDocument() throws SAXException{
@@ -45,7 +45,7 @@ public class ParserXmlStyle extends ParserXmlGeneral {
 	}
     
 	/**
-	 * Méthode lancée à l'ouverture d'une balise : on crée l'élément (un auteur ou une suggestion)
+	 * Methode lancee e l'ouverture d'une balise : on cree l'element (un auteur ou une suggestion)
 	 */
 	@Override
     public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
@@ -64,9 +64,9 @@ public class ParserXmlStyle extends ParserXmlGeneral {
     }
 	
 	/**
-	 * Méthode lancée à la fermeture d'une balise :
-	 * - si l'élément est un attribut d'auteur ou de suggestion, on set la valeur de l'attribut au contenu de la balise (située dans le buffer)
-	 * - si l'élément est un auteur ou une suggestion, alors il ou elle est terminée, on peut la push dans la bonne liste
+	 * Methode lancee e la fermeture d'une balise :
+	 * - si l'element est un attribut d'auteur ou de suggestion, on set la valeur de l'attribut au contenu de la balise (situee dans le buffer)
+	 * - si l'element est un auteur ou une suggestion, alors il ou elle est terminee, on peut la push dans la bonne liste
 	 */
     @Override
 	public void endElement(String uri, String localName, String name){
@@ -111,7 +111,7 @@ public class ParserXmlStyle extends ParserXmlGeneral {
     }
     
 	/**
-	 * Méthode publique permettant de récupérer la liste d'auteurs (dans la pratique toujours un seul)
+	 * Methode publique permettant de recuperer la liste d'auteurs (dans la pratique toujours un seul)
 	 */
 	public ArrayList<Style> getData() {
 		return entries;

@@ -5,8 +5,8 @@ import android.view.animation.Transformation;
 import android.widget.LinearLayout.LayoutParams;
 
 /**
- * Classe représentant l'animation utilisée pour afficher et cacher le menu (MenuFragment) avec un effet de slide
- * Cette classe hérite de la classe Animation
+ * Classe representant l'animation utilisee pour afficher et cacher le menu (MenuFragment) avec un effet de slide
+ * Cette classe herite de la classe Animation
  */
 public class DropDownAnim extends Animation {
 	

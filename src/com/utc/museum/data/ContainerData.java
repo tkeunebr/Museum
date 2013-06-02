@@ -20,12 +20,12 @@ import com.utc.museum.parsing.ParserXmlStyle;
 
 
 /**
- * Une classe abstraite permettant de lancer le parsing et récupérer les données à l'aide d'une méthode statique
+ * Une classe abstraite permettant de lancer le parsing et recuperer les donnees e l'aide d'une methode statique
  */
 public abstract class ContainerData {
 
 	/**
-	 * Méthode statique permettant de lancer le parsing. Elle retourne une liste contenant les données Oeuvres.
+	 * Methode statique permettant de lancer le parsing. Elle retourne une liste contenant les donnees Oeuvres.
 	 */
 	public static ArrayList<Oeuvre> getOeuvres(String urlData){
 		SAXParserFactory fabrique = SAXParserFactory.newInstance();
@@ -40,7 +40,7 @@ public abstract class ContainerData {
             e.printStackTrace();
         }
 		
-		// Récupération de la représentation (type XML) de la ressource		
+		// Recuperation de la representation (type XML) de la ressource
 		InputStream input = null;
 		try {
 			input = new ClientResource(urlData).get(MediaType.APPLICATION_XML).getStream();
@@ -66,7 +66,7 @@ public abstract class ContainerData {
 
 	
 	/**
-	 * Méthode statique permettant de lancer le parsing. Elle retourne une liste contenant les données Auteurs.
+	 * Methode statique permettant de lancer le parsing. Elle retourne une liste contenant les donnees Auteurs.
 	 */
 	public static ArrayList<Auteur> getAuteurs(String urlData){
 		SAXParserFactory fabrique = SAXParserFactory.newInstance();
@@ -81,7 +81,7 @@ public abstract class ContainerData {
             e.printStackTrace();
         }
 
-		// Récupération de la représentation (type XML) de la ressource		
+		// Recuperation de la representation (type XML) de la ressource
 		InputStream input = null;
 		try {
 			input = new ClientResource(urlData).get(MediaType.APPLICATION_XML).getStream();
@@ -105,7 +105,7 @@ public abstract class ContainerData {
 		return entries;
 	}
 	/**
-	 * Méthode statique permettant de lancer le parsing. Elle retourne une liste contenant les données de la liste d'Oeuvres.
+	 * Methode statique permettant de lancer le parsing. Elle retourne une liste contenant les donnees de la liste d'Oeuvres.
 	 */
 	public static ArrayList<ItemListe> getListe(String urlData){
 		SAXParserFactory fabrique = SAXParserFactory.newInstance();
@@ -120,7 +120,7 @@ public abstract class ContainerData {
             e.printStackTrace();
         }
 
-		// Récupération de la représentation (type XML) de la ressource		
+		// Recuperation de la representation (type XML) de la ressource
 		InputStream input = null;
 		try {
 			input = new ClientResource(urlData).get(MediaType.APPLICATION_XML).getStream();
@@ -144,7 +144,7 @@ public abstract class ContainerData {
 		return entries;
 	}
 	/**
-	 * Méthode statique permettant de lancer le parsing. Elle retourne une liste contenant les données Styles.
+	 * Methode statique permettant de lancer le parsing. Elle retourne une liste contenant les donnees Styles.
 	 */
 	public static ArrayList<Style> getStyles(String urlData){
 		SAXParserFactory fabrique = SAXParserFactory.newInstance();
@@ -159,7 +159,7 @@ public abstract class ContainerData {
             e.printStackTrace();
         }
 
-		// Récupération de la représentation (type XML) de la ressource		
+		// Recuperation de la representation (type XML) de la ressource
 		InputStream input = null;
 		try {
 			input = new ClientResource(urlData).get(MediaType.APPLICATION_XML).getStream();

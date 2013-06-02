@@ -27,13 +27,13 @@ import com.utc.museum.data.Oeuvre;
 import com.utc.museum.data.Suggestion;
 
 /**
- * Classe représentant le fragment d'une oeuvre
- * Cette classe hérite de la classe abstraite DetailsFragment, qui permet de factoriser tous les éléments commun des Fragments de type Détails de l'application
+ * Classe representant le fragment d'une oeuvre
+ * Cette classe herite de la classe abstraite DetailsFragment, qui permet de factoriser tous les elements commun des Fragments de type Details de l'application
  */
 public class OeuvreFragment extends DetailsFragment {
 	
 	/**
-     * Constante contenant le chemin d'accès à une ressource de type Oeuvre sur le réseau
+     * Constante contenant le chemin d'acces e une ressource de type Oeuvre sur le reseau
      */
 	public static final String URL = ipServ + "artworks?artwork=";
 	
@@ -79,8 +79,8 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	 /**
-     * Méthode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory, avec comme propriété l'id de l'oeuvre et la position du menu
-     * @param menuIndex L'item cliqué dans le menu
+     * Methode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory, avec comme propriete l'id de l'oeuvre et la position du menu
+     * @param menuIndex L'item clique dans le menu
      * @param oeuvre L'id de l'oeuvre que l'utilisateur veut consulter
      * @return OeuvreFragment Une instance de la classe OeuvreFragment
      */	
@@ -95,7 +95,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	 /**
-     * Méthode permettant de démarrer le téléchargement des données ainsi que le remplissage des vues avec des tâches asynchrones
+     * Methode permettant de demarrer le telechargement des donnees ainsi que le remplissage des vues avec des teches asynchrones
      */	
 	protected void startLoading() {
 		mConnexion = ConnectionChecker.isOnline(getActivity());
@@ -109,7 +109,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Méthode permettant la mise à jour du texte dans les vues
+     * Methode permettant la mise e jour du texte dans les vues
      */		
 	private void updateUiTexte() {
 		if (mAlData != null) {
@@ -138,7 +138,7 @@ public class OeuvreFragment extends DetailsFragment {
      }
 	
 	/**
-     * Méthode permettant la mise à jour des images dans les vues
+     * Methode permettant la mise e jour des images dans les vues
      */	
 	private void updateUiVisuel() {
 		if (mAlData != null && mOeuvreBitmap != null) {
@@ -149,7 +149,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Méthode permettant la mise à jour des suggestions "A proximité" dans les vues
+     * Methode permettant la mise e jour des suggestions "A proximite" dans les vues
      */	
 	private void updateUiSuggType1() {
 			LinearLayout layoutSuggType1 = (LinearLayout) v.findViewById(R.id.layout_suggestions_visuels_type1);
@@ -207,7 +207,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Méthode permettant la mise à jour des suggestions "Dans l'historique" dans les vues
+     * Methode permettant la mise e jour des suggestions "Dans l'historique" dans les vues
      */	
 	private void updateUiSuggType2() {
 		LinearLayout layoutSuggType2 = (LinearLayout) v.findViewById(R.id.layout_suggestions_visuels_type2);
@@ -265,7 +265,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Tâche asynchrone pour le téléchargement des données de type texte pour la partie centrale du Fragment (informations concernant l'oeuvre)
+     * Teche asynchrone pour le telechargement des donnees de type texte pour la partie centrale du Fragment (informations concernant l'oeuvre)
      */	
 	private class DownloadDataTask extends AsyncTask<String, Void, ArrayList<? extends Entry>> {
 		protected void onPreExecute () {
@@ -294,7 +294,7 @@ public class OeuvreFragment extends DetailsFragment {
 	 }
 	
 	/**
-     * Tâche asynchrone pour le téléchargement du visuel de l'oeuvre
+     * Teche asynchrone pour le telechargement du visuel de l'oeuvre
      */	
 	private class DownloadImageVisuelTask extends AsyncTask<Void, Void, Bitmap> {
 		protected void onPreExecute () {
@@ -316,7 +316,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Tâche asynchrone pour le téléchargement des données des suggestions de type "A proximité"
+     * Teche asynchrone pour le telechargement des donnees des suggestions de type "A proximite"
      */	
 	private class DownloadSuggType1Task extends AsyncTask<Void, Void, ArrayList<Bitmap>> {
 		protected void onPreExecute () {
@@ -342,7 +342,7 @@ public class OeuvreFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Tâche asynchrone pour le téléchargement des données des suggestions de type "Dans l'historique"
+     * Teche asynchrone pour le telechargement des donnees des suggestions de type "Dans l'historique"
      */	
 	private class DownloadSuggType2Task extends AsyncTask<Void, Void, ArrayList<Bitmap>> {
 		protected void onPreExecute () {

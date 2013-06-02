@@ -10,9 +10,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 /**
- * Classe abstraite représentant une Entry générique et les éléments communs des Entry de l'application
- * Une Entry est une entrée, par exemple une oeuvre, un auteur...
- * Toutes les Entry de l'application héritent de cette classe
+ * Classe abstraite representant une Entry generique et les elements communs des Entry de l'application
+ * Une Entry est une entree, par exemple une oeuvre, un auteur...
+ * Toutes les Entry de l'application heritent de cette classe
  */
 public abstract class Entry {
 	protected String nom;

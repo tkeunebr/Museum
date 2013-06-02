@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Classe représentant l'Activité initialisant le Fragment menu de l'application (utilisée uniquement en format téléphone)
- * Elle est appelée au démarrage par MainActivity, si celle ci a détecté que l'utilisateur utilise un téléphone
+ * Classe representant l'Activite initialisant le Fragment menu de l'application (utilisee uniquement en format telephone)
+ * Elle est appelee au demarrage par MainActivity, si celle ci a detecte que l'utilisateur utilise un telephone
  */
 public class ListeActivity extends Activity {
 	

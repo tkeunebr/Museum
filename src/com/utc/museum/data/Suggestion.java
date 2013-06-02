@@ -10,7 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 /**
- * Classe représentant une Suggestion dans l'application
+ * Classe representant une Suggestion dans l'application
  */
 public class Suggestion {
 	private String urlImage;

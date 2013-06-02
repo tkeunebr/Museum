@@ -31,34 +31,34 @@ import com.utc.museum.data.Entry;
 import com.utc.museum.data.ItemListe;
 
 /**
- * Classe abstraite représentant un fragment générique et les éléments communs des Fragments de type Détails
- * Tous les Fragments de type DetailsFragment de l'application héritent de cette classe
+ * Classe abstraite representant un fragment generique et les elements communs des Fragments de type Details
+ * Tous les Fragments de type DetailsFragment de l'application heritent de cette classe
  */
 public abstract class DetailsFragment extends Fragment {
 	/**
-     * Constantes permettant de faire référence de manière sûre à une erreur donnée et d'afficher le message correspond à l'utilisateur
+     * Constantes permettant de faire reference de maniere sere e une erreur donnee et d'afficher le message correspond e l'utilisateur
      */
 	public static final int DIALOG_LISTE_OEUVRES_ID = 0;
 	public static final int DIALOG_ABOUT_ID = 1;
 	public static final int DIALOG_NO_CONNEXION_ID = 2;
 	
 	/**
-	 * Constante permettant de récupérer l'adresse IP du serveur
+	 * Constante permettant de recuperer l'adresse IP du serveur
 	 */
-	public static final String ipServ = "http://192.168.1.32:8182/calm/";
+	public static final String ipServ = "http://192.168.0.15:8182/calm/";
 	
 	/**
-     * Constante contenant le chemin d'accès pour réaliser un POST de l'utilisateur courant
+     * Constante contenant le chemin d'acces pour realiser un POST de l'utilisateur courant
      */
 	public static final String URL_POST_USER = ipServ + "?user=";
 	
 	/**
-     * Constante contenant le chemin d'accès à une ressource de type Liste Oeuvres sur le réseau
+     * Constante contenant le chemin d'acces e une ressource de type Liste Oeuvres sur le reseau
     */ 
 	public static final String URL_LISTE_OEUVRES = ipServ + "artworkList?userName=";
 	
 	/**
-	 * Constante permettant de faire référence de manière unique à la clé utilisée pour stockée l'id de l'oeuvre et l'id du menu
+	 * Constante permettant de faire reference de maniere unique e la cle utilisee pour stockee l'id de l'oeuvre et l'id du menu
 	 */
 	public static final String idOeuvre = "idOeuvre";
 	public static final String idMenu = "idMenu";
@@ -86,7 +86,7 @@ public abstract class DetailsFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		
 		f = (MenuFragment) getFragmentManager().findFragmentById(R.id.fragment_liste);
-		// Le booléen mTablette vaut vrai si l'utilisateur utilise une tablette, faux sinon
+		// Le booleen mTablette vaut vrai si l'utilisateur utilise une tablette, faux sinon
 		mTablette = f == null ? false : true;
 
 		if (!mTablette) {
@@ -139,15 +139,15 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Méthode permettant de déterminer si des tâches asynchrones tournent en arrière plan
-     * @return Vrai s'il reste des tâches asynchrones, faux sinon
+     * Methode permettant de determiner si des teches asynchrones tournent en arriere plan
+     * @return Vrai s'il reste des teches asynchrones, faux sinon
      */	
 	public boolean hasTasks() {
 		return (mDataTask != null || mImageVisuelTask != null || mSuggType1Task != null || mSuggType2Task != null || mItemsTask != null);
 	}
 	
 	/**
-     * Méthode permettant de fermer la tâche concernant la liste des oeuvres à proximité
+     * Methode permettant de fermer la teche concernant la liste des oeuvres e proximite
      */
 	public void closeTasksGeneral() {
 		if (mItemsTask != null) {
@@ -157,8 +157,8 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Méthode permettant de fermer les tâches concernant la partie centrale du fragment Détails (Oeuvre, Auteur, ...)
-     * Cette méthode ferme également les tâches concernant les suggestions
+     * Methode permettant de fermer les teches concernant la partie centrale du fragment Details (Oeuvre, Auteur, ...)
+     * Cette methode ferme egalement les teches concernant les suggestions
      */
 	public void closeTasks() {
 		if (mDataTask != null) {
@@ -180,7 +180,7 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Méthode permettant de fermer toutes les tâches asynchrones du fragment
+     * Methode permettant de fermer toutes les teches asynchrones du fragment
      */
 	public void closeAllTasks() {
 		closeTasksGeneral();
@@ -203,7 +203,7 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Méthode permettant de remplir la liste des oeuvres à proximité à partir des données récupérées de la tâche asynchrone
+     * Methode permettant de remplir la liste des oeuvres e proximite e partir des donnees recuperees de la teche asynchrone
      */
 	private void updateUiListe() {
 		if (mProgressBarListeOeuvres != null && mListViewListeOeuvres != null && mItems != null) {
@@ -247,7 +247,7 @@ public abstract class DetailsFragment extends Fragment {
      }
 	
 	/**
-     * Tâche asynchrone pour le téléchargement de la liste des oeuvres à proximité de l'utilisateur
+     * Teche asynchrone pour le telechargement de la liste des oeuvres e proximite de l'utilisateur
      */	
 	private class DownloadListItemsTask extends AsyncTask<String, Void, ArrayList<ItemListe>> {
 		protected void onPreExecute() {
@@ -268,7 +268,7 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Tâche asynchrone pour le téléchargement de la liste des oeuvres à proximité de l'utilisateur
+     * Teche asynchrone pour le telechargement de la liste des oeuvres e proximite de l'utilisateur
      */	
 	private class PostUserLoginTask extends AsyncTask<String, Void, Void> {
 		protected void onPreExecute() {
@@ -293,11 +293,11 @@ public abstract class DetailsFragment extends Fragment {
 	}
 	
 	/**
-     * Classe générique héritant de DialogFragment (boîte de dialogue)
+     * Classe generique heritant de DialogFragment (boete de dialogue)
      */	
 	public static class MonDialogFragment extends DialogFragment {
 		/**
-	     * Méthode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory, avec comme propriété l'id du message que l'on veut afficher
+	     * Methode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory, avec comme propriete l'id du message que l'on veut afficher
 	     * @param id L'id du message que l'on veut afficher, par exemple DetailsFragment.DIALOG_NO_CONNEXION_ID
 	     * @return MonDialogFragment Une instance de la classe MonDialogFragment
 	     */		
@@ -336,7 +336,7 @@ public abstract class DetailsFragment extends Fragment {
 	            	break;
 	            case DetailsFragment.DIALOG_ABOUT_ID:
 	            	String msg;
-	            	msg = "<b>Login</b><br/> " + f.getLogin() + "<br/><br/><b>Développeurs</b><br/>- Thomas Keunebroek<br/>- Alexandre Masciulli<br/><br/><b>Projet</b><br/>TX00 : Aide à la visite d'un musée<br/><br>Projet CALM (Contextualized Annotation for Learning through Mobility)<br><br>- Pierre-Yves Gicquel<br>- Dominique Lenne";
+	            	msg = "<b>Login</b><br/> " + f.getLogin() + "<br/><br/><b>Developpeurs</b><br/>- Thomas Keunebroek<br/>- Alexandre Masciulli<br/><br/><b>Projet</b><br/>TX00 : Aide e la visite d'un musee<br/><br>Projet CALM (Contextualized Annotation for Learning through Mobility)<br><br>- Pierre-Yves Gicquel<br>- Dominique Lenne";
 	            	builder = new AlertDialog.Builder(getActivity())
                     .setTitle(getString(R.string.a_propos))
                     .setMessage(Html.fromHtml(msg))

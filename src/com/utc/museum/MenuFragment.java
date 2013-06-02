@@ -20,8 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 /**
- * Classe représentant le menu de navigation
- * C'est cette classe qui permet de faire le lien entre les différents Fragments/Activity de type Détails de l'application 
+ * Classe representant le menu de navigation
+ * C'est cette classe qui permet de faire le lien entre les differents Fragments/Activity de type Details de l'application
  */
 public class MenuFragment extends ListFragment {
 	private int mItemSelectionne = -1;
@@ -34,7 +34,7 @@ public class MenuFragment extends ListFragment {
 	private String mLoginId = null;
 	
 	/**
-     * Constantes permettant l'identification de manière unique des Fragments dans la pile des Fragments
+     * Constantes permettant l'identification de maniere unique des Fragments dans la pile des Fragments
      */
 	public final static String HOMEFRAGMENT = "class com.utc.museum.HomeFragment";
 	public final static String OEUVREFRAGMENT = "class com.utc.museum.OeuvreFragment";
@@ -65,7 +65,7 @@ public class MenuFragment extends ListFragment {
                 getListView().setChoiceMode(ListView.CHOICE_MODE_NONE);
         }
         
-        // On met à jour le fragment détails
+        // On met e jour le fragment details
         if (mFragmentDetails == null) {
         	showDetails(-1, "");
         }  
@@ -104,17 +104,17 @@ public class MenuFragment extends ListFragment {
 	}
 	
 	/**
-     * Méthode permettant d'instancier un fragment de type Details selon la demande de l'utilisateur. Cette méthode est appelée suite à un clique sur élément du menu
-     * Le fragment est affiché sur la partie droite en mode tablette, et une nouvelle activity est lancée en mode téléphone
-     * @param menuIndex L'item cliqué dans le menu
+     * Methode permettant d'instancier un fragment de type Details selon la demande de l'utilisateur. Cette methode est appelee suite e un clique sur element du menu
+     * Le fragment est affiche sur la partie droite en mode tablette, et une nouvelle activity est lancee en mode telephone
+     * @param menuIndex L'item clique dans le menu
      * @param idOeuvre L'id de l'oeuvre que l'utilisateur est actuellement en train de consulter
      * @return void
      */	
 	public void showDetails(int menuIndex, String idOeuvre) {
         if (mTablette) {
-            // C'est une tablette, on affiche les détails dans le fragment détails
+            // C'est une tablette, on affiche les details dans le fragment details
 	        if (idOeuvre == "") {
-	        	// Premier démarrage, pas d'oeuvre sélectionnée, on affiche la liste des oeuvres (avec demande du login utilisateur)
+	        	// Premier demarrage, pas d'oeuvre selectionnee, on affiche la liste des oeuvres (avec demande du login utilisateur)
 	        	mFragmentDetails = (ListeOeuvresFragment) ListeOeuvresFragment.newInstance();
     			FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_details, mFragmentDetails);
@@ -130,7 +130,7 @@ public class MenuFragment extends ListFragment {
 	        	}
 	        	getListView().setItemChecked(menuIndex, true);
 	        	if (mItemSelectionne != menuIndex || !mIdOeuvre.equalsIgnoreCase(idOeuvre)) {
-	        		// On ne va pas recharger 2 fois la même chose
+	        		// On ne va pas recharger 2 fois la meme chose
 		        	FragmentManager fm = getFragmentManager();
 		        	FragmentTransaction ft = fm.beginTransaction();
 		        	mFragmentCache = null;
@@ -208,7 +208,7 @@ public class MenuFragment extends ListFragment {
             // Ce n'est pas une tablette, on lance une nouvelle Activity
         	Intent intent = null;
         	if (idOeuvre == "") {
-    	       	// Premier démarrage, pas d'oeuvre sélectionnée, on affiche la liste des oeuvres (avec demande du login utilisateur)
+    	       	// Premier demarrage, pas d'oeuvre selectionnee, on affiche la liste des oeuvres (avec demande du login utilisateur)
         		intent = new Intent(getActivity(), ListeOeuvresActivity.class);
     	    }
         	else {
@@ -233,7 +233,7 @@ public class MenuFragment extends ListFragment {
 	}
 	
 	/**
-     * Méthode permettant de cacher le menu (MenuFragment) avec une animation
+     * Methode permettant de cacher le menu (MenuFragment) avec une animation
      */	
 	public void hideMenu() {
 		ObjectAnimator fadeOut = ObjectAnimator.ofFloat(mLayout, "alpha", 0f);
@@ -252,7 +252,7 @@ public class MenuFragment extends ListFragment {
 	}
 	
 	/**
-     * Méthode permettant d'afficher le menu (MenuFragment) avec une animation
+     * Methode permettant d'afficher le menu (MenuFragment) avec une animation
      */	
 	public void showMenu() {
 		ObjectAnimator fadeIn = ObjectAnimator.ofFloat(mLayout, "alpha", 1f);
@@ -282,9 +282,9 @@ public class MenuFragment extends ListFragment {
 	}
 	
 	/**
-     * Méthode permettant de vérifier si des tâches de fond tournent encore dans le fragment Details
-     * Si c'est le cas, ces tâches sont annulées. Méthode à appeler quand l'utilisateur change de vue avant la fin du chargement pour éviter tout problème
-     * @param Le fragment dont on veut vérifier et annuler les tâches
+     * Methode permettant de verifier si des teches de fond tournent encore dans le fragment Details
+     * Si c'est le cas, ces teches sont annulees. Methode e appeler quand l'utilisateur change de vue avant la fin du chargement pour eviter tout probleme
+     * @param Le fragment dont on veut verifier et annuler les teches
      * @return void
      */	
 	public void verifierTachesFond(Fragment f) {

@@ -28,15 +28,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 /**
- * Classe représentant le fragment contenant la liste des oeuvres à proximité
- * Cette classe hérite de la classe abstraite DetailsFragment, qui permet de factoriser tous les éléments commun des Fragments de type Détails de l'application
- * Elle est appelée après chargement de l'Activity principale, elle permet à l'utilisateur de choisir une oeuvre de démarrage parmi la liste
- * Elle se charge également de demander son login à l'utilisateur en premier lieu 
+ * Classe representant le fragment contenant la liste des oeuvres e proximite
+ * Cette classe herite de la classe abstraite DetailsFragment, qui permet de factoriser tous les elements commun des Fragments de type Details de l'application
+ * Elle est appelee apres chargement de l'Activity principale, elle permet e l'utilisateur de choisir une oeuvre de demarrage parmi la liste
+ * Elle se charge egalement de demander son login e l'utilisateur en premier lieu
  */
 public class ListeOeuvresFragment extends DetailsFragment {
 	
 	/**
-     * Constante contenant le chemin d'accès à une ressource de type Liste Oeuvres sur le réseau
+     * Constante contenant le chemin d'acces e une ressource de type Liste Oeuvres sur le reseau
      */ 
 	public final String URL = ipServ + "artworkList?userName=";
 	
@@ -105,7 +105,7 @@ public class ListeOeuvresFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Méthode permettant l'affichage de la boîte de dialogue demander son login à l'utilisateur
+     * Methode permettant l'affichage de la boete de dialogue demander son login e l'utilisateur
      */	
 	private void showDialog() {
 		 mDialog = null;
@@ -142,7 +142,7 @@ public class ListeOeuvresFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Méthode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory
+     * Methode statique de la classe qui permet d'instancier un nouvel objet de la classe en utilisant le pattern Factory
      * @return ListeOeuvresFragment Une instance de la classe ListeOeuvresFragment
      */	
 	public static ListeOeuvresFragment newInstance() {
@@ -182,7 +182,7 @@ public class ListeOeuvresFragment extends DetailsFragment {
      }
 	
 	/**
-     * Méthode permettant de démarrer le téléchargement de la liste des oeuvres à proximité avec une tâche asynchrone, et le remplissage de la vue avec cette liste
+     * Methode permettant de demarrer le telechargement de la liste des oeuvres e proximite avec une teche asynchrone, et le remplissage de la vue avec cette liste
      */	
 	private void startLoading() {
 		mConnexion = ConnectionChecker.isOnline(getActivity());
@@ -205,7 +205,7 @@ public class ListeOeuvresFragment extends DetailsFragment {
 	}
 	
 	/**
-     * Tâche asynchrone pour le téléchargement de la liste des oeuvres à proximité
+     * Teche asynchrone pour le telechargement de la liste des oeuvres e proximite
      */	
 	private class DownloadListItemsTask extends AsyncTask<String, Void, ArrayList<ItemListe>> {
 		protected void onPreExecute () {

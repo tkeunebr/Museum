@@ -6,8 +6,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 
 /**
- * Classe représentant la première Activity lancée au démarrage
- * Cette classe se charge de détecter la configuration téléphone ou tablette et d'appeler la bonne Activity selon le cas 
+ * Classe representant la premiere Activity lancee au demarrage
+ * Cette classe se charge de detecter la configuration telephone ou tablette et d'appeler la bonne Activity selon le cas
  */
 public class MainActivity extends Activity {
 		

@@ -1,8 +1,8 @@
 package com.utc.museum.data;
 
 /**
- * Classe représentant un Auteur dans l'application
- * Cette classe hérite de la classe abstraite Entry, qui permet de factoriser toutes les entrées gérées par l'application
+ * Classe representant un Auteur dans l'application
+ * Cette classe herite de la classe abstraite Entry, qui permet de factoriser toutes les entrees gerees par l'application
  */
 public class Auteur extends Entry {
 	private String dates;

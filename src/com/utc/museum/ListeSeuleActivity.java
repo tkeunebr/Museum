@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Classe représentant l'Activity lancée par la MainActivity lorsque l'on est en mode téléphone. Seul le menu est alors affiché, il n'y a pas de Fragment Détails
+ * Classe representant l'Activity lancee par la MainActivity lorsque l'on est en mode telephone. Seul le menu est alors affiche, il n'y a pas de Fragment Details
  */
 public class ListeSeuleActivity extends Activity {
 	

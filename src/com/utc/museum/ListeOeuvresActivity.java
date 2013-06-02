@@ -4,8 +4,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 /**
- * Classe représentant la liste des oeuvres à proximité sous forme d'Activity (utilisée uniquement en format téléphone)
- * Cette classe hérite de la classe abstraite DetailsActivity, qui permet de factoriser tous les éléments commun des Activity de type Détails de l'application
+ * Classe representant la liste des oeuvres e proximite sous forme d'Activity (utilisee uniquement en format telephone)
+ * Cette classe herite de la classe abstraite DetailsActivity, qui permet de factoriser tous les elements commun des Activity de type Details de l'application
  */
 public class ListeOeuvresActivity extends DetailsActivity {
 	
@@ -15,7 +15,7 @@ public class ListeOeuvresActivity extends DetailsActivity {
 		
 		setContentView(R.layout.details_seuls);
 		 
-		// On affiche le fragment en plein écran
+		// On affiche le fragment en plein ecran
 		ListeOeuvresFragment f = (ListeOeuvresFragment) ListeOeuvresFragment.newInstance();
 		FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
