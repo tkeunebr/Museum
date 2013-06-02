@@ -29,3 +29,6 @@ local.properties
 
 # Data files
 *.json
+
+#Calm4Rest
+calm4rest/*
