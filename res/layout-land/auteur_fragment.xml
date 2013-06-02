@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal" 
+	    android:gravity="center" 
+	    android:baselineAligned="false">	
+
+	    <LinearLayout 
+	        android:id="@+id/progressbar_main"
+	        android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:orientation="vertical"
+	    	android:visibility="gone"
+	    	android:gravity="center" >
+	    	 
+		    <ProgressBar
+		        android:layout_width="100dp"
+		        android:layout_height="100dp"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		     />
+		    
+		    <TextView android:text="@string/chargement"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+	   
+	    </LinearLayout>
+	    
+	    <ScrollView 
+	        android:id="@+id/layout_auteur"
+		    android:layout_width="match_parent" 
+		    android:layout_height="match_parent"
+		    android:layout_weight="35"
+		    android:scrollbars="vertical"
+		    android:visibility="gone">
+	    
+		    <LinearLayout
+		    	android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+		
+		        <TextView
+		        	android:id="@+id/titre_image"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_horizontal"
+		            android:textStyle="bold"
+		            android:padding="8dp"
+		            android:textSize="33dp" />
+		        
+				<TextView
+		        	android:id="@+id/dates"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:gravity="center_vertical|center_horizontal"
+		            android:paddingTop="3dp"
+		            android:textSize="18dp" />
+				
+				<View
+			        android:layout_marginTop="20dp"
+			        android:layout_marginBottom="25dp"
+				    android:layout_width="match_parent"
+				   	android:layout_height="2dp"
+				    android:background="#33b5e5"/>
+				
+				<LinearLayout
+				    android:layout_width="match_parent"
+			        android:layout_height="480dip"
+			        android:orientation="vertical"
+			        android:paddingRight="8dp"
+				    android:paddingLeft="8dp">
+	
+					<ProgressBar
+					    android:id="@+id/progressBar_visuel"
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+					    android:layout_gravity="center_vertical|center_horizontal"
+					    android:visibility="invisible" />
+			
+						<ImageView
+				        	android:id="@+id/visuel"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+							android:contentDescription="@string/auteur_description"
+				            android:layout_gravity="center_vertical|center_horizontal"
+				            android:visibility="gone"
+				            />
+					
+				</LinearLayout>
+				
+				<TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:gravity="center_vertical|center_horizontal"
+		            android:layout_marginTop="50dp"
+		            android:textSize="22dp"
+		            android:text="@string/biographie" />
+				
+				<View
+			        android:layout_marginTop="20dp"
+			        android:layout_marginBottom="25dp"
+				    android:layout_width="match_parent"
+				   	android:layout_height="2dp"
+				    android:background="#33b5e5"/>
+				
+				<TextView
+				    android:id="@+id/description"
+				    android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:padding="15dp"
+		            android:textScaleX="1.1"/>
+			 
+			</LinearLayout>
+		
+	    </ScrollView>
+	   
+	    <View
+	        android:id="@+id/separateur"
+		    android:layout_width="3dp"
+		   	android:layout_height="match_parent"
+		    android:background="#d0cfcf"
+		    android:visibility="invisible" />
+	    
+		<LinearLayout
+		    android:id="@+id/layout_suggestions"
+			android:orientation="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="65" 
+		    android:visibility="gone"
+		    android:paddingTop="30dp"
+		    android:background="#ffffff" >
+			
+		    <TextView
+			    android:id="@+id/suggestions"
+		    	android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:textSize="25dp" 
+		        android:text="@string/suggestions"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="20dip" />
+	
+		        <LinearLayout
+		            android:id="@+id/layout_suggestions_type1"
+		            android:layout_width="match_parent"
+		            android:minHeight="220dip"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical" 
+		            android:layout_gravity="top|center_horizontal"
+		            android:gravity="top|center_horizontal"
+		            android:padding="10dip" >
+					
+		            <TextView
+		                android:id="@+id/suggestions_type1_titre"
+		                android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:gravity="center"
+				        android:textSize="16dp" 
+				        android:padding="8dp"
+				        android:text="@string/suggestionsType1"
+		                />
+		            
+		            <View
+				        android:layout_marginTop="10dp"
+				        android:layout_marginBottom="10dp"
+					    android:layout_width="match_parent"
+					   	android:layout_height="1dp"
+					    android:background="#33b5e5"/>
+		            
+		            <ProgressBar
+						android:id="@+id/progressBar_suggestions_type1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:visibility="invisible" 
+						android:paddingTop="5dip" />
+		            
+		             <LinearLayout
+			            android:id="@+id/layout_suggestions_visuels_type1"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:orientation="horizontal"
+			            android:padding="20dip"
+			            android:gravity="center" >
+		            </LinearLayout>
+		                
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:id="@+id/layout_suggestions_type2"
+		            android:layout_width="match_parent"
+		            android:minHeight="250dip"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical" 
+					android:padding="10dip"
+					android:layout_gravity="top|center_horizontal"
+		            android:gravity="top|center_horizontal" >
+		            
+		            <TextView
+		                android:id="@+id/suggestions_type2_titre"
+		                android:layout_width="match_parent"
+				        android:layout_height="match_parent"
+				        android:gravity="center"
+				        android:textSize="16dp" 
+				        android:padding="8dp"
+				        android:text="@string/suggestionsType2"
+		                />
+		            
+		            <View
+				        android:layout_marginTop="10dp"
+				        android:layout_marginBottom="10dp"
+					    android:layout_width="match_parent"
+					   	android:layout_height="1dp"
+					    android:background="#33b5e5"/>
+		            
+		            <ProgressBar
+						android:id="@+id/progressBar_suggestions_type2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:visibility="invisible" 
+						/>
+		            
+		            <LinearLayout
+			            android:id="@+id/layout_suggestions_visuels_type2"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:orientation="horizontal"
+			            android:padding="20dip"
+			            android:gravity="center" >
+			           
+		           </LinearLayout>
+	
+		        </LinearLayout>
+	
+		      </LinearLayout>
+	
+	</LinearLayout>
